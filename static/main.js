@@ -8,7 +8,7 @@ for (let recipe of recipes) {
         const authorRecipe = recipe.querySelector('p').textContent
 
         modalOverlay.classList.add('active')
-        modalOverlay.querySelector('img').src = `assets/${imgPath}.png`
+        modalOverlay.querySelector('img').src = `../assets/${imgPath}.png`
         modalOverlay.querySelector('h2').textContent = titleRecipe
         modalOverlay.querySelector('p').textContent = authorRecipe
     })
