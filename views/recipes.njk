@@ -12,13 +12,13 @@
     <body>
         <header>
             <nav>
-                <a href="index.html" id="title">
+                <a href="/" id="title">
                     Foodfy
                 </a>
-                <a href="/about.html" id="about">
+                <a href="/about" id="about">
                     Sobre
                 </a>
-                <a href="/recipes.html" id="recipes">
+                <a href="/recipes" id="recipes">
                     Receitas
                 </a>
             </nav>
@@ -26,7 +26,7 @@
 
         <section class="recipes">
             {% for item in items %}
-                <div class="recipe">
+                <div class="recipe" id="{{item.id}}">
                     <img src="{{item.image}}" alt="{{item.title}}" class="img-recipe">
                     <div>
                         <h2>

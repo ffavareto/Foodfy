@@ -18,19 +18,29 @@ nunjucks.configure("views", {
 })
 
 server.get('/', (req, res) => {
-    return res.render('index')
+    return res.render('index', { items: dataHome })
 })
 
-server.get('/about.html', (req, res) => {
+server.get('/about', (req, res) => {
     return res.render('about')
 })
 
-server.get('/recipes.html', (req, res) => {
+server.get('/recipes', (req, res) => {
     return res.render('recipes', { items: data })
 })
 
-server.get('/index.html', (req, res) => {
-    return res.render('index', { items: dataHome })
+server.get("/recipe", function (req, res) {
+    const id = req.query.id
+
+    const recipe = data.find((recipe) => {
+        return recipe.id == id
+    })
+
+    if (!recipe) {
+        return res.send("recipe not found!")
+    }
+
+    res.render("recipe", { item: recipe })
 })
 
 server.listen(3000, () => {

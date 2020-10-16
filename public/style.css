@@ -171,3 +171,71 @@ footer p {
 .modal-overlay.active {
     visibility: visible;
 }
+
+/* Recipe */
+.recipe {
+    width: 100%;
+}
+
+#img-header-recipe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#img-header-recipe img {
+    width: 980px;
+}
+
+#about-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+#about-author h1 {
+    font-size: 36px;
+}
+
+#about-author h3 {
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.recipe-infos {
+    width: 980px;
+    margin: 32px auto;
+}
+
+.recipe-infos div:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-infos div h2 {
+    font-size: 24px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+
+.recipe-infos div span {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.recipe-infos ul li {
+    font-size: 18px;
+}
+
+.recipe-infos p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.recipe-infos ul, .recipe-infos p {
+    display:none
+}
